@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Gate -->
+<section id="gate" class="gate">
+  <div class="doodles" aria-hidden="true">
+    <span class="d sun">☀</span><span class="d star s1">★</span><span class="d star s2">★</span>
+    <span class="d heart h1">♥</span><span class="d heart h2">♥</span><span class="d cloud">☁</span>
+  </div>
+  <div class="gate-card">
+    <h1>Heyyy! 👋</h1>
+    <p>Vedika its your special day <br>Type your birthday <b>(DDMM)</b> to open your surprise 🎁</p>
+    <form id="gateForm" autocomplete="off">
+      <input id="dateInput" type="text" inputmode="numeric" maxlength="4" placeholder="_ _ _ _" aria-label="Birthday as DDMM">
+      <button type="submit">Enter! 🎉</button>
+    </form>
+    <p id="gateMsg" class="gate-msg"></p>
+  </div>
+</section>
+
+<!-- Main -->
+<main id="main" class="main hidden">
+  <button id="muteBtn" class="mute" aria-label="Toggle music">🔊</button>
+  <div id="balloons" class="balloons" aria-hidden="true"></div>
+  <canvas id="confetti"></canvas>
+
+  <header class="hero">
+    <p class="small">🎂 25 · 11 🎂</p>
+    <h1 id="title">Happy Birthday!</h1>
+    <p class="sub" id="subtitle">Wish You a Happiest Bday dear 💛</p>
+  </header>
+
+  <section class="wires" id="board">
+    <h2><span>(drag them around!)</span></h2>
+    <svg id="wireSvg" class="wire-svg" aria-hidden="true"></svg>
+    <div id="photos"></div>
+  </section>
+
+  <section class="cards-section">
+    <h2>Some words for you <span>(tap a card)</span></h2>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <footer class="foot">
+    <p id="footer">A small gift from your frnd if you consider me as your frnd too</p>
+  </footer>
+</main>
+
+<audio id="bgm" src="audio/song.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
